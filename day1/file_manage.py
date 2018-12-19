@@ -24,5 +24,10 @@ with open("new2.txt", "w") as file:
 # 4. 여러 줄의 파일 읽기
 with open("new2.txt", "r") as file:
     lines = file.readlines()
-    for line in lines:
-        print(line)
+    # for line in lines:
+    #     print(line)
+
+    i = 0
+    while i < len(lines):
+        print( lines[i])
+        i += 1
