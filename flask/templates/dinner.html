@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{menu}} 먹어!!</h1>
+    <img src="{{menu_url}}"> </br>
+    <iframe width="560" height="315" src="{{youtube_url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {%if menu == "짜장면" %}
+    <h1> 높 치킨</h1>
+    {%else %}
+    <h1> 예압 치킨</h1>
+    {%endif%}
+    <hr>
+    저녁 리스트는 이거였어
+    {% for food in dinner %}
+        <p>{{food}}</p>
+    {% endfor %}
+</body>
+</html>
