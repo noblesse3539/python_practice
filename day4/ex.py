@@ -41,10 +41,8 @@ b = int(input('영어: '))
 c = int(input('수학: '))
 d = int(input('과학: '))
 # 아래에 코드를 작성해 주세요.
-if a >= 90 and b > 80 and c > 85 and d >= 80 :
-    print(True)
-else :
-    print(False)
+print(a >= 90 and b > 80 and c > 85 and d >= 80)
+
 '''
 문제 5.
 표준 입력으로 물품 가격 여러 개가 문자열 한 줄로 입력되고, 각 가격은 ;(세미콜론)으로 구분되어 있습니다.
@@ -54,11 +52,18 @@ else :
 
 prices = input('물품 가격을 입력하세요: ')
 # 아래에 코드를 작성해 주세요.
-
 priceList = prices.split(";")
+# 정수로 변환 하는 법 1.
 intList = []
 for i in priceList:
     intList.append(int(i))
 intList.sort()
 intList.reverse()
 print(intList)
+
+# 정수로 변환 하는 법 2.
+# map(int, priceList) map은 첫번째 인자에 함수를 넣으면 두번째 인자의 list 등을 돌면서 함수를 실행해준다. 즉, int 뿐만아니라 print도 되고, 등등
+
+# 정렬 하는 법
+#intList.sort()
+#prices_int = sorted(prices_int, reverse=True) 이렇게 하면 내림차순으로 정렬됨
